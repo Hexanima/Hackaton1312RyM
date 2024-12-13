@@ -1,6 +1,13 @@
-![reactjs-vite-tailwindcss-boilerplate](https://user-images.githubusercontent.com/16243531/217138979-b854309c-4742-4275-a705-f9fec5158217.jpg)
+# LEERME
 
-# React Tailwindcss Boilerplate build with Vite
+Esto es un proyecto para la Hackaton del 13/12
+
+- __Tematica: Rick & Morty__
+- __Scope?: Frontend solamente__
+
+## Template:
+
+Esto fue iniciado con un template, dejo la descripcion general:
 
 This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
 
@@ -18,20 +25,6 @@ This project uses many tools like:
 - [Prettier](https://prettier.io)
 
 ## Getting Started
-
-### Install
-
-Create the project.
-
-```bash
-pnpm dlx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
-Access the project directory.
-
-```bash
-cd my-app
-```
 
 Install dependencies.
 
