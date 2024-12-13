@@ -9,6 +9,7 @@ import {
 
 interface NavService {
   page: number;
+  favs: number[];
   next: () => void;
   prev: () => void;
   addFav: (id: number) => void;
@@ -34,11 +35,13 @@ export function NavProvider({ children }: PropsWithChildren) {
   function addFav(id: number) {
     const newFavs = [...favs];
     newFavs.push(id);
+    localStorage.setItem(FAVS_KEY, JSON.stringify(newFavs));
     setFavs(newFavs);
   }
 
   function removeFav(id: number) {
-    const newFavs = favs.filter((fav) => fav === id);
+    const newFavs = favs.filter((fav) => fav == id);
+    localStorage.setItem(FAVS_KEY, JSON.stringify(newFavs));
     setFavs(newFavs);
   }
 
@@ -49,11 +52,14 @@ export function NavProvider({ children }: PropsWithChildren) {
     }
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem(FAVS_KEY, JSON.stringify(favs));
-  }, [favs]);
-
-  const contextValues: NavService = { page, next, prev, addFav, removeFav };
+  const contextValues: NavService = {
+    page,
+    favs,
+    next,
+    prev,
+    addFav,
+    removeFav,
+  };
 
   return (
     <NavContext.Provider value={contextValues}>{children}</NavContext.Provider>

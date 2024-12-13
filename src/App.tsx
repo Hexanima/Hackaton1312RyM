@@ -3,9 +3,9 @@ import { Home } from "pages/home";
 
 function App() {
   return (
-    <NavProvider>
-      <Home />
-    </NavProvider>
+      <NavProvider>
+        <Home />
+      </NavProvider>
   );
 }
 
